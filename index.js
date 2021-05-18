@@ -1,7 +1,7 @@
 const { Client, MessageEmbed } = require('discord.js');
 const config = require('./config');
 const commands = require('./help');
-var test = require('./mhrscraper.js');
+const test = require('./mhrscraper.js');
 
 let bot = new Client({
   fetchAllMembers: true, // Remove this if the bot is in large guilds.
