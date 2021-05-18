@@ -1,6 +1,7 @@
 const { Client, MessageEmbed } = require('discord.js');
 const config = require('./config');
 const commands = require('./help');
+var test = require('./mhrscraper.js');
 
 let bot = new Client({
   fetchAllMembers: true, // Remove this if the bot is in large guilds.
@@ -64,6 +65,14 @@ bot.on('message', async message => {
           }
         }
         message.channel.send(embed);
+        break;
+
+        case 'mhrbishaten':
+          console.log(test) //doesn't work, wants to scrape page data
+          let response = 'Monster Hunter Rise: Bishaten';
+          let testmsg = await message.reply('You asked for ' + response);
+          console.log('Bishaten');
+
         break;
     }
   }
